@@ -1,13 +1,14 @@
 const submitButton = document.querySelector('.submit');
 const emailInput = document.querySelector('#email');
 const wrongInput = document.querySelector('.wrongInput');
+const form = document.querySelector('.emailInput');
 
 function ValidateEmail(inputText)
     {
         var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         if(inputText.value.match(mailformat))
             {
-                alert("Valid email address!");
+                form.submit();
                 return true;
             }
         else
@@ -19,9 +20,3 @@ function ValidateEmail(inputText)
                 return false;
             }
     }
-
-
-
-/*submitButton.onclick = function() {
-    ValidateEmail(emailInput);
-}*/
