@@ -4,6 +4,7 @@ const wrongInput = document.querySelector('.wrongInput');
 const form = document.querySelector('.emailInput');
 const initialForm = document.querySelector('.initialForm');
 const thankYouPage = document.querySelector('.thankYouPage');
+const confirmationMessage = document.querySelector('.confirmationMessage');
 let userEmail;
 
 function ValidateEmail(inputText)
@@ -13,6 +14,16 @@ function ValidateEmail(inputText)
             {
                 userEmail = emailInput.value;
                 initialForm.style.opacity = "0";
+                setTimeout(() => {
+                    initialForm.style.display = "none"
+                    thankYouPage.style.display = "block"
+                }, 310);
+                setTimeout(() => {
+                    thankYouPage.style.opacity = "1"
+                }, 400);
+                confirmationMessage.innerHTML = `A confirmation email has been sent to <strong style="font-weight:500; font-family: 'Roboto-Bold', serif;">${userEmail}</strong>. Please open it and click the button inside to confirm your subscription.`
+                
+
                 return true;
             }
         else
