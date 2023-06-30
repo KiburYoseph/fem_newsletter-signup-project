@@ -49,13 +49,14 @@ body {
 
 h1 {
     font-family: 'Roboto-Bold', serif;
-    font-size: clamp(1rem, 10vw, 3.5rem);
-    line-height: 1rem;
+    font-size: clamp(0.3rem, 4vw, 3.5rem);
+    line-height: 3.6rem;
     font-weight: 400;
+    margin-bottom: clamp(0.3rem, 2vw, 2rem);
 }
 
 p {
-    font-size: 16px;
+    font-size: clamp(0.1rem, 1.3vw, 1rem);
 }
 
 ul {
@@ -63,13 +64,14 @@ ul {
 }
 
 li {
-    line-height: 0.3rem;
+    line-height: 1rem;
     display: flex;
     gap: 1rem;
+    margin-bottom: -10px;
 }
 
 .emailInput {
-    margin-top: 2rem;
+    margin-top: clamp(0.1rem, 2vw, 2rem);
     display: flex;
     flex-direction: column;
 }
@@ -82,7 +84,7 @@ label {
 
 label > p {
     font-family: 'Roboto-Bold', serif;
-    font-size: 0.8rem;
+    font-size: clamp(0.1rem, 1.5vw, 0.8rem);
     margin-bottom: 0.5rem;
 }
 
@@ -91,11 +93,11 @@ label > p {
 }
 
 #email {
-    height: clamp(1rem, 5vw, 3rem);
+    height: clamp(1rem, 4vw, 3rem);
     border-radius: 10px;
     border: 1px solid hsl(231, 7%, 60%);
-    margin-bottom: 1.5rem;
-    font-size: clamp(0.4rem, 3vw, 1rem);
+    margin-bottom: clamp(0.1rem, 1.5vw, 1.5rem);
+    font-size: clamp(0.4rem, 1.4vw, 1rem);
     font-family: 'Roboto-Regular', serif;
     padding-left: 1.8rem;
     color: hsl(234, 29%, 20%);
@@ -108,6 +110,12 @@ label > p {
     border: none;
     background-color: hsl(234, 29%, 20%);
     color: white;
-    font-size: clamp(0.4rem, 3vw, 1rem);
+    font-size: clamp(0.4rem, 1.5vw, 1rem);
     font-family: 'Roboto-Bold', serif;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.submit:hover {
+    background-color: hsl(4, 100%, 67%);
 }
