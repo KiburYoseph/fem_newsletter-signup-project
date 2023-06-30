@@ -1,11 +1,30 @@
-const submitButton = document.querySelector('.submit');
 const emailInput = document.querySelector('#email');
 const wrongInput = document.querySelector('.wrongInput');
 const form = document.querySelector('.emailInput');
 const initialForm = document.querySelector('.initialForm');
 const thankYouPage = document.querySelector('.thankYouPage');
 const confirmationMessage = document.querySelector('.confirmationMessage');
+const dismissButton = document.querySelector('.dismissButton');
 let userEmail;
+
+emailInput.onclick = function () {
+    wrongInput.innerHTML = "";
+    emailInput.style.backgroundColor = "white";
+    emailInput.style.border = "1px solid hsl(231, 7%, 60%)";
+    emailInput.style.color = "hsl(234, 29%, 20%)"
+}
+
+dismissButton.onclick = function () {
+    thankYouPage.style.opacity = "0";
+    setTimeout(() => {
+        thankYouPage.style.display = "none"
+        initialForm.style.display = "block"
+    }, 310);
+    setTimeout(() => {
+        emailInput.value = ""
+        initialForm.style.opacity = "1"
+    }, 400);
+}
 
 function ValidateEmail(inputText)
     {

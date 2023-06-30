@@ -172,3 +172,7 @@ label > p {
     cursor: pointer;
     transition: 300ms;
 }
+
+.card2 > .submit:hover {
+    background-color: hsl(4, 100%, 67%);
+}
